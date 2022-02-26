@@ -70,6 +70,7 @@ python3 -m venv hack
 source hack/bin/activate
 
 #In case of Windows CMD:
+python3 -m venv hack
 hack\Scripts\activate
 
 ```
