@@ -69,7 +69,7 @@ cd Adulting101
 python3 -m venv hack
 source hack/bin/activate
 
-In case of Windows CMD:
+#In case of Windows CMD:
 hack\Scripts\activate
 
 ```
