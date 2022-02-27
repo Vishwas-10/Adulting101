@@ -22,6 +22,10 @@ No one teaches us how to open a bank account, how to file returns/taxes or even 
 
 - Python
 
+- Tensorflow
+
+- Dialogflow
+
 - Django
 
 - HTML
