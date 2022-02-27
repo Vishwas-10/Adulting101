@@ -42,10 +42,10 @@
 					<a class="nav-item nav-link active" href="{% url 'index' %}">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-item nav-link" href="{% url 'create_update' %}">Create New Page</a>
+					<a class="nav-item nav-link" href="{% url 'create_update' %}">Ask/Add Anything</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-item nav-link" href="{% url 'random_entry' %}">Random Page</a>
+					<a class="nav-item nav-link" href="{% url 'random_entry' %}">Random Infos/Doubts</a>
 				</li>
 			</ul>
 			<form class="search-form form-inline my-2 my-lg-0" action="/" method="POST">{% csrf_token %}
@@ -60,7 +60,7 @@
 								{% endfor %}
 							</div>
 					</div>
-					<input type="text" class="search form-control mr-sm-2" list="wiki-list" placeholder="Search Encyclopedia"
+					<input type="text" class="search form-control mr-sm-2" list="wiki-list" placeholder="Search ADULTING101"
 						name="search" aria-label="entry search bar">
 						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 						<datalist id="wiki-list">
@@ -71,6 +71,7 @@
 				</div>
 			</form>
 		</nav>
+		
 
 			
 		<div class="main ">
