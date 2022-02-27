@@ -19,6 +19,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
 		<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"> 
 	<link href="{% static 'encyclopedia/styles.css' %}" rel="stylesheet" />
 	<link href="{% static 'encyclopedia/404.css' %}" rel="stylesheet" />
 	{% block style %} {% endblock style %}
@@ -27,51 +28,51 @@
 <body>
 	{% block body %}
 	<div class="container-fluid">
-	<nav class="navbar navbar-expand-lg navbar-light bg-light ">
-		<a class="navbar-brand" href="{% url 'index' %}">
-			<img src="https://www.linkpicture.com/q/Screenshot-2022-02-26-at-4.49.30-PM.png"
-			alt="Adulting 101" class="logo_img" height="69" >
-		</a>
-		<button id="sidebar_btn" class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#sidebar_nav_menu" aria-controls="sidebar_nav_menu" aria-expanded="false"
-			aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item">
-					<a class="nav-item nav-link active" href="{% url 'index' %}">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-item nav-link" href="{% url 'create_update' %}">Ask/Add Anything</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-item nav-link" href="{% url 'random_entry' %}">Random Infos/Doubts</a>
-				</li>
-			</ul>
-			<form class="search-form form-inline my-2 my-lg-0" action="/" method="POST">{% csrf_token %}
-				<div class="input-group mb-3">
-					<div class="input-group-prepend">
-						<button id="wiki_search_btn" class="btn btn-secondary dropdown-toggle mobile-block"
-							type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						</button>
-							<div id="search_dropdown" class="dropdown-menu bg-dark position-absolute">
-								{% for entry_item in entries_options  %}
-								<a class="dropdown-item bg-dark text-light" href="#">{{entry_item}}</a>
+		<nav class="navbar navbar-dark navbar-expand-lg navbar-light" style="background-color: #5553b7; font-size: 19px !important; padding: 12px !important;">
+			<a class="navbar-brand" href="{% url 'index' %}">
+				<img src="https://www.linkpicture.com/q/Screenshot_2022-02-27_at_3.51.36_PM-removebg-preview.png"
+				alt="Adulting 101" class="logo_img" height="60" >
+			</a>
+			<button id="sidebar_btn" class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#sidebar_nav_menu" aria-controls="sidebar_nav_menu" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-item nav-link active" href="{% url 'index' %}">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-item nav-link" href="{% url 'create_update' %}">Ask/Add Anything</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-item nav-link" href="{% url 'random_entry' %}">Random Infos/Doubts</a>
+					</li>
+				</ul>
+				<form class="search-form form-inline my-2 my-lg-0" action="/" method="POST">{% csrf_token %}
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<button id="wiki_search_btn" class="btn btn-secondary dropdown-toggle mobile-block"
+								type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							</button>
+								<div id="search_dropdown" class="dropdown-menu bg-dark position-absolute">
+									{% for entry_item in entries_options  %}
+									<a class="dropdown-item bg-dark text-light" href="#">{{entry_item}}</a>
+									{% endfor %}
+								</div>
+						</div>
+						<input type="text" class="search form-control mr-sm-2" list="wiki-list" placeholder="Search ADULTING101"
+							name="search" aria-label="entry search bar">
+							<button class="btn btn-success" type="submit" style="border-radius:23px">Search</button>
+							<datalist id="wiki-list">
+								{% for entry in entries_options %}
+								<option value="{{entry|safe}}"></option>
 								{% endfor %}
-							</div>
+							</datalist>
 					</div>
-					<input type="text" class="search form-control mr-sm-2" list="wiki-list" placeholder="Search ADULTING101"
-						name="search" aria-label="entry search bar">
-						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-						<datalist id="wiki-list">
-							{% for entry in entries_options %}
-							<option value="{{entry|safe}}"></option>
-							{% endfor %}
-						</datalist>
-				</div>
-			</form>
-		</nav>
+				</form>
+			</nav>
 		
 
 			
