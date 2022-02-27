@@ -4,7 +4,7 @@
 # ADULTING 101
 
 <div style="display:flex;flex-direction:row; justify-content; space-between;width:100%">
-  <h3>:rocket: <a  target="_blank" href=" "> Run Adulting 101 Live </a></h3>  
+  <h3>:rocket: <a  target="_blank" href="https://finadulting.herokuapp.com"> Run Adulting 101 Live </a></h3>  
 </div>
 
 Welcome to **ADULTING 101** Our project for Hack36 a 36 hour long hackathon conducted by IIT MANDI 
