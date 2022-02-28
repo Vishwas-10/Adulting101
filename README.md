@@ -9,6 +9,8 @@
 
 Welcome to **ADULTING 101** Our project for Hack36 a 36 hour long hackathon conducted by IIT MANDI 
 
+Explanation Video [Link](https://drive.google.com/file/d/1ZZzrgTuGOfeBaVv-DgYaktFhspvMiO5V/view?usp=sharing)
+
  **TEAM NAME -  FIG Mates**
  
 
